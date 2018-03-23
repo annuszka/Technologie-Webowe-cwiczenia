@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>Technologie Webowe - AngularJS</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+  <script src="tw32.js"></script>
+ </head>
+ <body ng-app="ajsImiona" ng-controller="ctlImiona"> <!--nazwa aplikacji i kontrolera, bedzie działać dla body i wnetrza-->
+  <div class="container">
+  <h3>Technologie Webowe - AngularJS</h3>
+  <hr />
+  <p>Najpopularniejsze polskie imiona</p>
+  Filtr imion: <input id="fimie" ng-model="imie" /><br /> <!-- nie trzeba click, przypiszemy do zmiennej, podswietla sie pod formularzem oto co wpiszemy-->
+
+
+
+  <table class="table table-sm table-striped">
+   <thead>
+    <tr><th>Lp.</th><th ng-click="order='pozycja'; dir=!dir;" style="cursor:pointer">Pozycja</th><th ng-click="order='imie'; dir=!dir;" style="cursor:pointer;">Imię</th></tr>
+   </thead><tbody>
+    <tr ng-repeat="x in imiona | filter:imie | orderBy:order:dir"> <!-- :'imie'sortuje, -imie lub 'imie':true - sortowanie w odwrotnym porzadku, false - w poarzadku normalnie, filter wyszukuje imiona na literke jak zaczniemy wpisywac nie obciazajac serwera-->
+     <td>{{$index+1}}</td><td>{{x.pozycja}}</td><td>{{x.imie}}</td>
+    </tr>
+   </tbody>
+  </table>   
+  </div>
+ </body>
+</html>

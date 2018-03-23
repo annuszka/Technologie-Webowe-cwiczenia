@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>Technologie Webowe - JQuery</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script> 
+  <script src="tw31.js"></script>
+ </head>
+ <body>
+  <div class="container">
+  <h3>Technologie Webowe - JQuery</h3>
+  <hr />
+
+  <form>
+
+  <div class="form-group row">
+   <label id="imielabel" for="imie" class="col-sm-3 col-form-label">Imię</label>
+   <div class="col-sm-9">
+    <input type="text" id="imie" class="form-control" placeholder="Podaj imię" />
+    <div id="podpimie"></div>
+   </div>
+  </div>
+
+  <div class="form-group row">
+   <label for="nazw" class="col-sm-3 col-form-label">Nazwisko</label>
+   <div class="col-sm-9">
+    <input type="text" id="nazw" class="form-control" placeholder="Podaj nazwisko" />
+    <div id="podpnazw"></div>
+   </div>
+  </div>
+
+  <div class="form-group row">
+   <label for="haslo" class="col-sm-3 col-form-label">Hasło</label>
+   <div class="col-sm-9">
+    <input type="text" id="haslo" class="form-control" placeholder="Podaj hasło" />
+    <div id="podphaslo"></div>
+   </div>
+  </div>
+
+  <button id="wyslij" class="btn btn-primary btn-lg">Wyślij</button>
+  </form>
+  <div id="tresc"></div>
+  </div>
+ </body>
+</html>
