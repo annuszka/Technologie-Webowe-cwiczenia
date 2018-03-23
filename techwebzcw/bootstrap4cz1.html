@@ -1,0 +1,110 @@
+           <!DOCTYPE html>
+           <html>
+           <head>
+              <meta charset="utf-8" />
+              <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><!--dodac viewport zeby mozna skalowac na urzadzeniach mobilnych , mozna ustawic zeby nie dalo sie skalowac-->
+              <title>Bootstrap</title>
+              <!-- najpierw css, potem jquery i poper a na koniec javascript bootstrap, pobrane z getbootstrap.com-->
+              <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+              <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+              <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+              <!--zeby zmienic cos z bootstrapa trzeba napisac pod linkiem swojego i mozna zmieniac i dopasowac pod siebie w dodatkowym stylu-->
+              <style type="text/css">
+
+                .page-header h1 {background-color: lightgray;}
+              </style>
+           </head>
+           <body>
+            <div class="page-header">
+              <nav class="navbar fixed-top navbar-light bg-light">
+                  <a class="navbar-brand" href="#">Fixed top</a>
+                  <a class="navbar-brand" href="#">Fixed top</a>
+              </nav>
+            <h1 class="text-center">Bootstrap</h1></div>
+            <hr />
+            <div class="container">
+              <div class="row">
+                <div class="col-sx-12 col-sm-4 col-md-3 col-lg-2">
+                  <div class="card border-primary">
+                    <div class="card-header">Menu </div>
+                    <div class="card-body">
+                      <ul class="nav flex-column">
+                     <!--   <nav class="nav"> zaamiast li mozna zrobic i tez dziala , nie przejdzie przez walidator bo nie ma takich znacznikow, flex column w pionie-->
+                        <li class="nav-item">
+                  <a href="" class="nav-link">jeden</a><br /></li>
+                 <li class="nav-item"><a href=""class="nav-link">dwa</a><br /></li>
+                 <li class="nav-item"> <a href=""class="nav-link">trzy</a><br /></li>
+                  <li class="nav-item"><a href=""class="nav-link">cztery</a><br /></li>
+                </ul>
+                </div>
+                  </div><!-- card-->
+                  <br />
+                </div><!-- col-->
+                <div class="col-sx-12 col-sm-8 col-md-9 col-lg-10">
+                  <div class="card border-primary">
+                  <div class="card-header bg-primary text-white">  
+                    bootstrap
+                  </div>
+                    <div class="card-body">
+                    <p>Biblioteka bootstrap rozwiązuje problem wyglądu strony i właściwiego dopasowania treści do wielkości ekranu dla komputerów stajonarnych i urządzeń mobilnych. </p>
+                    </div>
+                    <div class="card-footer">
+                        <p>Dokumentacja <a href="http://getbootstrap.com">getbootstrap.com</a></p>
+                    </div>
+                  </div>
+                </div><!-- col wartosci sumuja sie do 12-->
+            </div><!-- row-->
+            <div class="row">
+              <div class="col-xs-12">
+                <table class="table  table-striped table-hover table-sm table-responsive"><!-- sm zamiast condensed zmniejsza zageszczenia-->
+                  <thead>
+                    <tr><th>Lp.</th><th>Nazwa.</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>1.</td><td>jedenascie</td></tr>
+                    <tr><td>2.</td><td>dwanascie</td></tr>
+                    <tr><td>3.</td><td>trzynascie</td></tr>
+                    <tr><td>4.</td><td>czternascie</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div><!--row-->
+            <div class="row">
+              <div class="col-xs-12">
+                <button class="btn btn-primary" data-toggle="collapse" href="#ukryty">Naciśnij mnie</button> <!-- data-toggle pozwala na rozwiniecie po nacisnieciu buttona-->
+                <button class="btn btn-info">Naciśnij mnie</button>
+                <button class="btn btn-warning">Naciśnij mnie</button>
+                <button class="btn btn-danger">Naciśnij mnie</button><br />
+                <button class="btn btn-outline-danger" data-toggle="modal" data-target="#modalik">Naciśnij mnie</button>
+                <div class="collapse" id="ukryty">
+                  <br />
+                  <img src="http://guminski.net/pc1.png" /><br />
+                  <p>Tego tekstu nie widać. Trzeba nacisnąć niebieski przycisk aby się pokazał</p>
+                  <br />
+                  
+                </div>
+                <br />
+                <!--modalne okienko -->
+                <div class="modal fade" id="modalik">
+                    <div class="modal-dialog modal-content">
+                        
+                            <div class="modal-header">Okienko modalne</div>
+                            <div class="modal-body">
+                              <div class="alert alert-info">Bardzo ważny komunikat </div>
+                              <p>opis niezwykle ważnego komunikatu i inne bardzo ważne treści, które powinny znajdować się w tym wyskakującym okienku.</p>
+                              <button class="btn btn-success" data-dismiss="modal">close</button>
+                            </div>
+                        
+                    </div>
+
+                </div><!--modal okienko-->
+              </div><!--col-->
+            </div><!--row-->
+            <hr />
+           <div class="text-muted">&copy; 2017 WSZ</div>
+
+           </div><!--container-->
+           
+           </body>
+           </html>
